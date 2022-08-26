@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap');
+
+* {
+    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+
+
+
+.game-board {
+
+    width: 100%;
+    height: 500px;
+   
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#87CEEB, #E0F6FF);
+}
+
+.pipe {
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    right: 0;
+    animation: pipe-animation 2.5s infinite linear;
+    height: 150px;
+    padding-bottom: 34px;
+}
+
+@keyframes pipe-animation {
+    from {
+        right: -80;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+
+.mario {
+    width: 150px;
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 34px;
+    z-index: 10;
+}
+
+.jump {
+    animation: jump 1000ms ease-out;
+}
+
+@keyframes jump {
+
+    0% {
+        bottom: 0;
+    }
+
+    40% {
+        bottom: 180px;
+    }
+
+    50% {
+        bottom: 180px;
+    }
+
+    60% {
+        bottom: 180px;
+    }
+
+    100% {
+        bottom: 0;
+    }
+}
+.grass {
+    position: absolute;
+    bottom: 0;
+    width: 160px;
+    right: -160px;
+    padding-bottom: 34px;
+}
+
+.grass-animation{
+    animation: grass-animation 3s infinite linear;
+}
+
+@keyframes grass-animation {
+    from{
+        right: -80px;
+    }
+    to{
+        right: 100%;
+    }
+    
+}
+
+
+
+.clouds-1 {
+    position: absolute;
+    width: 400px;
+    padding-top: px;
+    z-index: 4;
+    animation: clouds-animation-1 40s infinite linear;
+}
+.clouds-2 {
+    position: absolute;
+    width: 270px;
+    padding-top: 150px;
+    z-index: 3;
+    animation: clouds-animation-2 50s infinite linear;
+}
+.clouds-3 {
+    position: absolute;
+    width: 150px;
+    padding-top: 300px;
+    z-index: 2;
+    animation: clouds-animation-3 75s infinite linear;
+}
+
+
+
+
+@keyframes clouds-animation-1 {
+    from{
+        right: -550px;
+    }
+    to{
+        right: 100%;
+    }
+}
+
+@keyframes clouds-animation-2 {
+    from{
+        right: -1300px;
+    }
+    to{
+        right: 100%;
+    }
+}
+
+@keyframes clouds-animation-3 {
+    from{
+        right: -250px;
+    }
+    to{
+        right: 100%;
+    }
+}
+
+
+.floor {
+    width: 1500px;
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 34px;
+   
+}
+.floor-1{
+position: absolute;  
+z-index: 0;
+}
+
+.floor-animation-1{
+animation: floor-animation-1 3.1s infinite linear;
+}
+
+@keyframes floor-animation-1 {
+0%{
+    right:0px;
+}
+100%{
+    right: 100%;    
+}
+}
+
+
+
+
+.floor-2{
+position: absolute; 
+right: -1500px;
+z-index: 10;
+}
+
+.floor-animation-2{
+animation: floor-animation-2 6.1s infinite linear;
+}
+
+@keyframes floor-animation-2 {
+0%{
+    right:-1500px;
+}
+100%{
+    right: 100%;    
+}
+}
+
+
+
+
+.floor-3{
+position: absolute;  
+right: -1500px;
+z-index: 10;
+}
+
+.floor-animation-3{
+animation: floor-animation-3 6.1s infinite linear;
+}
+
+@keyframes floor-animation-3 {
+0%{
+    right:-1500px;
+}
+100%{
+    right: 100%;    
+}
+}
+
+
+
+
+
+
+p{
+    font-family:'Roboto Mono', monospace;
+    padding: 130px;
+    text-align: center;
+    color: #87CEEB;
+   background: black;
+    
+   
+}
